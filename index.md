@@ -129,6 +129,7 @@ The test can simply be run by clicking on the *.cy.js file. Below is a snapshot 
 - **DELETE METHOD**
 
 &emsp;&emsp;<img src="/cypress/assets/delapi.png" width=50% height=50%/>
+&emsp;&emsp;![alt text](/cypress/assets/delapi.pngg)
 
 ## UI test scripts
 1. The UI test scripts are located under `cypress/e2e/ui/ui.cy.js`.
