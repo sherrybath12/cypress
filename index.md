@@ -4,7 +4,7 @@ title: Getting Started with Cypress
 permalink: /
 ---
 
-# Cypress Testing Framework
+# Cypress Framework
 
 ## Table of contents
 1. [Overview](#overview)
@@ -67,12 +67,11 @@ git clone https://github.com/sherrybath12/cypress.git
 ```
 
 ## Project Structure
-Cypress config file is located in the root folder and is named <mark>cypress.config.js</mark>
+`Cypress config file` is located in the root folder and is named <mark>cypress.config.js</mark>
 
 &emsp;&emsp;![alt text](/cypress/assets/cyconfig.png)
 
-## Cypress Test Script Files
-Cypress allows a strict format for naming script files. They should be suffixed with the highlighted text  
+`Cypress Test Script Files` follow a strict format for naming script files. They should be suffixed with the highlighted text  
 /folderpath/filename<mark>.cy.js</mark> and reside in the e2e folder.
 In this repostory you will find two script files:
 - e2e/api/api.cy.js
