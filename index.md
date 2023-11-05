@@ -70,7 +70,7 @@ git clone https://github.com/sherrybath12/cypress.git
 ## Config File
 Cypress config file is located in the root folder and is named <mark>cypress.config.js</mark>
 
-<img src="/cypress/assets/cyconfig.png" width=50% height=50%/>
+&emsp;&emsp;![alt text](/cypress/assets/cyconfig.png)
 
 ## Cypress Test Script Files
 Cypress allows a strict format for naming script files. They should be suffixed with the highlighted text  
@@ -79,7 +79,7 @@ In this repostory you will find two script files:
 - e2e/api/api.cy.js
 - e2e/ui/ui.cy.js
 
-<img src="/cypress/assets/specpattern.png" width=50% height=50%/>
+&emsp;&emsp;![alt text](/cypress/assets/specpattern.png)
 
 ## Launching the Tests
 Open a new terminal in VS Code and type the command:
@@ -89,19 +89,19 @@ npx cypress open
 
 This command will load the `Welcome to Cypress` GUI
 
-<img src="/cypress/assets/welcome.png" width=50% height=50%/>
+&emsp;&emsp;![alt text](/cypress/assets/welcome.png)
 
 Click on the `E2E Testing` to load the file with the test scripts
 
-<img src="/cypress/assets/loadspecs.png" width=50% height=50%/>
+&emsp;&emsp;![alt text](/cypress/assets/loadspecs.png)
 
 ## Running the Tests
 
 The test can simply be run by clicking on the *.cy.js file. Below is a snapshot of the all tests run successfully.
 
-<img src="/cypress/assets/apitest.png" width=50% height=50%/>
+&emsp;&emsp;![alt text](/cypress/assets/apitest.png)
 
-<img src="/cypress/assets/uirun.png" width=50% height=50%/>
+&emsp;&emsp;![alt text](/cypress/assets/uirun.png)
 
 
 ## API Test Scripts
@@ -112,23 +112,22 @@ The test can simply be run by clicking on the *.cy.js file. Below is a snapshot 
 
 - **GET METHOD**
 
-&emsp;&emsp;<img src="/cypress/assets/getapi.png" width=50% height=50%/>
+&emsp;&emsp;![alt text](/cypress/assets/getapi.png)
 
 - **GET METHOD with Querystring**
 
-&emsp;&emsp;<img src="/cypress/assets/getapiqs.png" width=50% height=50%/>
+&emsp;&emsp;![alt text](/cypress/assets/getapiqs.png)
 
 - **POST METHOD**
 
-&emsp;&emsp;<img src="/cypress/assets/postapi.png" width=50% height=50%/>
+&emsp;&emsp;![alt text](/cypress/assets/postapi.png)
 
 - **PUT METHOD**
 
-&emsp;&emsp;<img src="/cypress/assets/putapi.png" width=50% height=50%/>
+&emsp;&emsp;![alt text](/cypress/assets/putapi.png)
 
 - **DELETE METHOD**
 
-&emsp;&emsp;<img src="/cypress/assets/delapi.png" width=50% height=50%/>
 &emsp;&emsp;![alt text](/cypress/assets/delapi.png)
 
 ## UI test scripts
@@ -136,7 +135,7 @@ The test can simply be run by clicking on the *.cy.js file. Below is a snapshot 
 2. For this project, I have used the Nasa website (https://nasa.gov/).
 3. The tests implemented assert loading the website and presence of certain components on the UI.
 
-&emsp;&emsp;<img src="/cypress/assets/uitests.png.png" width=50% height=50%/>
+&emsp;&emsp;![alt text](/cypress/assets/uitests.png)
 
 ## What's Next
 
