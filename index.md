@@ -44,7 +44,7 @@ Learn more at the Cypress [official website](https://www.cypress.io/).
 ## Getting Started
 This guide explains to you in detail how to get started with installing cypress and getting to build your first specification for API and UI tests.
 
-## Pre-requisites:
+## Pre-requisites
 * Node version 10 or above should be installed. For more information follow steps [here](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
 * Code editor like VSCode in installed
 
