@@ -11,15 +11,14 @@ permalink: /
 2. [Key Features](#key-features)
 3. [Getting Started](#getting-started)
 4. [Pre-requisites](#pre-requisites)
-5. [Install cypress](#install-cypress)
+5. [Install Cypress](#install-cypress)
 6. [Key Features](#key-features)
 7. [Clone the Project](#clone-the-project)
-8. [Config File](#config-file)
-9. [Cypress Test Script Files](#cypress-test-script-files)
-10. [Launching the Tests](#launching-the-tests)
-11. [Running the Tests](#running-the-tests)
-12. [API Test Scripts](#api-test-scripts)
-13. [UI Test Scripts](#ui-test-scripts)
+8. [Project Structure](#project-structure)
+9. [Launching the Tests](#launching-the-tests)
+10. [Running the Tests](#running-the-tests)
+11. [API Test Scripts](#api-test-scripts)
+12. [UI Test Scripts](#ui-test-scripts)
 13. [What's Next](#whats-next)
 
 
@@ -67,7 +66,7 @@ Using a shell window, cd into the folder path where you would like to clone the 
 git clone https://github.com/sherrybath12/cypress.git
 ```
 
-## Config File
+## Project Structure
 Cypress config file is located in the root folder and is named <mark>cypress.config.js</mark>
 
 &emsp;&emsp;![alt text](/cypress/assets/cyconfig.png)
@@ -88,18 +87,23 @@ npx cypress open
 ```
 
 This command will load the `Welcome to Cypress` GUI
+Click on the `E2E Testing` to load the file with the test scripts
 
 &emsp;&emsp;![alt text](/cypress/assets/welcome.png)
-
-Click on the `E2E Testing` to load the file with the test scripts
 
 &emsp;&emsp;![alt text](/cypress/assets/loadspecs.png)
 
 ## Running the Tests
 
-The test can simply be run by clicking on the *.cy.js file. Below is a snapshot of the all tests run successfully.
+**API Tests** - The test can simply be run by clicking on the api.cy.js file. Below is a snapshot of the all tests run successfully.
 
 &emsp;&emsp;![alt text](/cypress/assets/apitest.png)
+
+A snapshot of the requests and responses can be seen in the console window
+
+&emsp;&emsp;![alt text](/cypress/assets/apirunconsole.png)
+
+**UI Tests** - The test can simply be run by clicking on the ui.cy.js file. Below is a snapshot of the all tests run successfully.
 
 &emsp;&emsp;![alt text](/cypress/assets/uirun.png)
 
@@ -111,26 +115,31 @@ The test can simply be run by clicking on the *.cy.js file. Below is a snapshot 
 4. The assertion checks for a 200 or 201 response and logs the response.
 
 - **GET METHOD**
+  The method signature is `GET` and displays all resources.
 
-&emsp;&emsp;![alt text](/cypress/assets/getapi.png)
+&emsp;&emsp;&emsp;&emsp;![alt text](/cypress/assets/getapi.png)
 
 - **GET METHOD with Querystring**
+  The method signature is `GET` and has a querystring parameter passed in.
 
-&emsp;&emsp;![alt text](/cypress/assets/getapiqs.png)
+&emsp;&emsp;&emsp;&emsp;![alt text](/cypress/assets/getapiqs.png)
 
 - **POST METHOD**
+The method signature is `POST` and requires a request body with the resource to be created.
 
-&emsp;&emsp;![alt text](/cypress/assets/postapi.png)
+&emsp;&emsp;&emsp;&emsp;![alt text](/cypress/assets/postapi.png)
 
 - **PUT METHOD**
+The method signature is `PUT` and does requires a request body with the resource parameters to be updated.
 
-&emsp;&emsp;![alt text](/cypress/assets/putapi.png)
+&emsp;&emsp;&emsp;&emsp;![alt text](/cypress/assets/putapi.png)
 
 - **DELETE METHOD**
+The method signature is `DELETE` and requires the resource id to be deleted.
 
-&emsp;&emsp;![alt text](/cypress/assets/delapi.png)
+&emsp;&emsp;&emsp;&emsp;![alt text](/cypress/assets/delapi.png)
 
-## UI test scripts
+## UI Test Scripts
 1. The UI test scripts are located under `cypress/e2e/ui/ui.cy.js`.
 2. For this project, I have used the Nasa website (https://nasa.gov/).
 3. The tests implemented assert loading the website and presence of certain components on the UI.
