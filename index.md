@@ -1,3 +1,9 @@
+---
+layout: default
+title: Getting Started with Cypress
+permalink: /
+---
+
 # Cypress Testing Framework
 
 ## Table of contents
