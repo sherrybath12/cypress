@@ -10,7 +10,7 @@ describe('UI tests spec', () => {
   })
 
   it('Verify Search box with placeholder text', () => {
-    cy.get(".hds-search-input").should("be.visible");
+    cy.get(".hds-search-panel-mobile-trigger > svg").should("be.visible");
   })
 
   it('Verify Image of the Day text and image', () => {
