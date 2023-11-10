@@ -49,7 +49,7 @@ This guide explains to you in detail how to get started with installing cypress 
 * Code editor like VSCode in installed
 
 ## Install cypress
-Cypress can be downloaded directly from the Cypress website (https://www.cypress.io/). The direct download will always download the latest version for your platform. It will download a zip file, which can be extracted by the user.
+Cypress can be downloaded directly from the Cypress website (https://www.cypress.io/) for the version of your choice. This will download a zip file, which can be extracted by the user.
 
 OR
 
@@ -67,6 +67,39 @@ git clone https://github.com/sherrybath12/cypress.git
 ```
 
 ## Project Structure
+
+After cloning this project, Cypress will scaffold out the below folder structure:
+
+![alt text](/cypress/assets/structure.png)
+
+1. <b>Fixtures</b> – Fixtures are used to store test data which can then be used throughout the tests. Usually, the data is stored in JSON format.
+
+![alt text](/cypress/assets/fixture.png)
+
+2. <b>Integration</b> – Integration folder includes all the test files. The test files may be written as .js, .jsx, .coffee and .cjsx. Usually the preferred extension is .js and the test file name format is test-name.spec.js.
+
+![alt text](/cypress/assets/integration.png)
+
+3. <b>Plugins</b> – This folder includes index.js file. This file will be automatically imported every time before the execution of every spec(test) file. Plugins enable you to tap into, modify, or extend the internal behavior of Cypress.
+
+![alt text](/cypress/assets/index.png)
+
+4. <b>Screenshots</b> – Cypress comes with the ability to take screenshots, whether you are running via cypress open or cypress run, even in CI. To take a manual screenshot you can use the cy.screenshot() command. Additionally, Cypress will automatically capture screenshots when a failure happens during cypress run.
+
+![alt text](/cypress/assets/screenshots.png)
+
+5. <b>Support</b> – This folder contains index.js and commands.js files. This index.js file is run before every single spec file. The support folder is a great place to put reusable behavior such as custom commands or global overrides that you want to be applied and available to all your spec files.
+
+![alt text](/cypress/assets/command.png)
+
+6. <b>Videos</b> – Cypress records a video for each spec file when running tests during cypress run. Videos are not automatically recorded during cypress open. Videos are stored in the videos folder which is set to cypress/videos by default.
+
+![alt text](/cypress/assets/videos.png)
+
+7. <b>Cypress.json</b> – It is used to save different cypress related configurations for eg. base URL, timeouts, etc. The default behavior of Cypress can be modified by supplying configuration options.
+
+![alt text](/cypress/assets/cyconfig.png)
+
 `Cypress config file` is located in the root folder and is named <mark>cypress.config.js</mark>
 
 &emsp;&emsp;![alt text](/cypress/assets/cyconfig.png)
