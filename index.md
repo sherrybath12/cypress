@@ -77,8 +77,8 @@ After cloning this project, Cypress will scaffold out the below folder structure
 
 <mark>Integration</mark> – Integration folder includes all the test files. The test files may be written as .js, .jsx, .coffee and .cjsx. Usually the preferred extension is .js and the test file name format is `testname.spec.js`.
 > In this repostory you will find two script files:  
-> integration/api/api.cy.js  
-> integration/ui/ui.cy.js
+> integration/api/api.spec.js  
+> integration/ui/ui.spec.js
 
 ![alt text](/cypress/assets/integration.png)
 
