@@ -12,14 +12,13 @@ permalink: /
 3. [Getting Started](#getting-started)
 4. [Pre-requisites](#pre-requisites)
 5. [Install Cypress](#install-cypress)
-6. [Key Features](#key-features)
-7. [Clone the Project](#clone-the-project)
-8. [Project Structure](#project-structure)
-9. [Launching the Tests](#launching-the-tests)
-10. [Running the Tests](#running-the-tests)
-11. [API Test Scripts](#api-test-scripts)
-12. [UI Test Scripts](#ui-test-scripts)
-13. [What's Next](#whats-next)
+6. [Clone the Project](#clone-the-project)
+7. [Project Structure](#project-structure)
+8. [Launching the Tests](#launching-the-tests)
+9. [Running the Tests](#running-the-tests)
+10. [API Test Scripts](#api-test-scripts)
+11. [UI Test Scripts](#ui-test-scripts)
+12. [What's Next](#whats-next)
 
 
 ## Overview
@@ -72,79 +71,78 @@ After cloning this project, Cypress will scaffold out the below folder structure
 
 ![alt text](/cypress/assets/structure.png)
 
-1. <b>Fixtures</b> – Fixtures are used to store test data which can then be used throughout the tests. Usually, the data is stored in JSON format.
+<mark>Fixtures</mark> – Fixtures are used to store test data which can then be used throughout the tests. Usually, the data is stored in JSON format.
 
 ![alt text](/cypress/assets/fixture.png)
 
-2. <b>Integration</b> – Integration folder includes all the test files. The test files may be written as .js, .jsx, .coffee and .cjsx. Usually the preferred extension is .js and the test file name format is test-name.spec.js.
+<mark>Integration</mark> – Integration folder includes all the test files. The test files may be written as .js, .jsx, .coffee and .cjsx. Usually the preferred extension is .js and the test file name format is test-name.spec.js.
+> In this repostory you will find two script files:  
+> integration/api/api.cy.js  
+> integration/ui/ui.cy.js
 
 ![alt text](/cypress/assets/integration.png)
 
-3. <b>Plugins</b> – This folder includes index.js file. This file will be automatically imported every time before the execution of every spec(test) file. Plugins enable you to tap into, modify, or extend the internal behavior of Cypress.
+<mark>Plugins</mark> – This folder includes index.js file. This file will be automatically imported every time before the execution of every spec(test) file. Plugins enable you to tap into, modify, or extend the internal behavior of Cypress.
 
 ![alt text](/cypress/assets/index.png)
 
-4. <b>Screenshots</b> – Cypress comes with the ability to take screenshots, whether you are running via cypress open or cypress run, even in CI. To take a manual screenshot you can use the cy.screenshot() command. Additionally, Cypress will automatically capture screenshots when a failure happens during cypress run.
+<mark>Screenshots</mark> – Cypress comes with the ability to take screenshots, whether you are running via cypress open or cypress run, even in CI. To take a manual screenshot you can use the cy.screenshot() command. Additionally, Cypress will automatically capture screenshots when a failure happens during cypress run.
 
 ![alt text](/cypress/assets/screenshots.png)
 
-5. <b>Support</b> – This folder contains index.js and commands.js files. This index.js file is run before every single spec file. The support folder is a great place to put reusable behavior such as custom commands or global overrides that you want to be applied and available to all your spec files.
+<mark>Support</mark> – This folder contains index.js and commands.js files. This index.js file is run before every single spec file. The support folder is a great place to put reusable behavior such as custom commands or global overrides that you want to be applied and available to all your spec files.
 
 ![alt text](/cypress/assets/command.png)
 
-6. <b>Videos</b> – Cypress records a video for each spec file when running tests during cypress run. Videos are not automatically recorded during cypress open. Videos are stored in the videos folder which is set to cypress/videos by default.
+<mark>Videos</mark> – Cypress records a video for each spec file when running tests during cypress run. Videos are not automatically recorded during cypress open. Videos are stored in the videos folder which is set to cypress/videos by default.
 
 ![alt text](/cypress/assets/videos.png)
 
-7. <b>Cypress.json</b> – It is used to save different cypress related configurations for eg. base URL, timeouts, etc. The default behavior of Cypress can be modified by supplying configuration options.
+<mark>Cypress.json</mark> – It is used to save different cypress related configurations for eg. base URL, timeouts, etc. The default behavior of Cypress can be modified by supplying configuration options.
 
 ![alt text](/cypress/assets/cyconfig.png)
 
-`Cypress config file` is located in the root folder and is named <mark>cypress.config.js</mark>
+<mark>Package.json</mark> – It is used to save all npm dependencies and scripts names in the case where the tests are to be triggered directly from the terminal.
 
-&emsp;&emsp;![alt text](/cypress/assets/cyconfig.png)
+![alt text](/cypress/assets/pkg.png)
 
-`Cypress Test Script Files` follow a strict format for naming script files. They should be suffixed with the highlighted text  
-/folderpath/filename<mark>.cy.js</mark> and reside in the e2e folder.
-In this repostory you will find two script files:
-- e2e/api/api.cy.js
-- e2e/ui/ui.cy.js
-
-&emsp;&emsp;![alt text](/cypress/assets/specpattern.png)
+> Line 8 depicts the syntax for the script name
 
 ## Launching the Tests
 Open a new terminal in VS Code and type the command:
 ```
 npx cypress open
 ```
+This will launch the cypress runner with the tests loaded.
 
-This command will load the `Welcome to Cypress` GUI
-Click on the `E2E Testing` to load the file with the test scripts
+![alt text](/cypress/assets/welcome.png)
 
-&emsp;&emsp;![alt text](/cypress/assets/welcome.png)
-
-&emsp;&emsp;![alt text](/cypress/assets/loadspecs.png)
+> Alternatively, the tests can be kicked off from the terminal by referencing the script name from the package.json
+```
+npm run <scriptname>
+```
 
 ## Running the Tests
 
-**API Tests** - The test can simply be run by clicking on the api.cy.js file. Below is a snapshot of the all tests run successfully.
+**API Tests** - The test can simply be run by clicking on the api.spec.js file. 
+Below is a snapshot of the all tests run successfully.
 
-&emsp;&emsp;![alt text](/cypress/assets/apitest.png)
+&emsp;&emsp;![alt text](/cypress/assets/apirun.png)
 
 A snapshot of the requests and responses can be seen in the console window
 
 &emsp;&emsp;![alt text](/cypress/assets/apirunconsole.png)
 
-**UI Tests** - The test can simply be run by clicking on the ui.cy.js file. Below is a snapshot of the all tests run successfully.
+**UI Tests** - The test can simply be run by clicking on the ui.spec.js file. 
+Below is a snapshot of the all tests run successfully.
 
 &emsp;&emsp;![alt text](/cypress/assets/uirun.png)
 
-
 ## API Test Scripts
-1. The API test scripts are located under `cypress/e2e/api/api.cy.js`.
-2. For this project, I have used the open source fake API's at (https://jsonplaceholder.typicode.com/).
-3. The tests are implemented for atleast each of the following request methods - GET, POST, PUT, DELETE.
-4. The assertion checks for a 200 or 201 response and logs the response.
+>1. The API test scripts are located under `cypress/integration/api/api.spec.js`.
+>2. For this project, I have used the open source fake API's at (https://jsonplaceholder.typicode.com/).
+>3. The tests are implemented for atleast each of the following request methods - GET, POST, PUT, DELETE.
+>4. The assertion checks for a 200 or 201 response and logs the response.
 
 - **GET METHOD**
   The method signature is `GET` and displays all resources.
@@ -172,7 +170,7 @@ The method signature is `DELETE` and requires the resource id to be deleted.
 &emsp;&emsp;&emsp;&emsp;![alt text](/cypress/assets/delapi.png)
 
 ## UI Test Scripts
-1. The UI test scripts are located under `cypress/e2e/ui/ui.cy.js`.
+1. The UI test scripts are located under `cypress/integration/ui/ui.spec.js`.
 2. For this project, I have used the Nasa website (https://nasa.gov/).
 3. The tests implemented assert loading the website and presence of certain components on the UI.
 
@@ -180,4 +178,4 @@ The method signature is `DELETE` and requires the resource id to be deleted.
 
 ## What's Next
 
-The tests can be configured to take create customized configurations, take screesnhots, videos, generate reports. 
+The tests can be configured to take create customized configurations, generate reports using report generation plugins.
