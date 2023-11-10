@@ -1,9 +1,3 @@
-// import { Schema } from "./schemas/test.schema";
-// const envName = Cypress.env("name");
-// const base_url = Cypress.env("base_url").;
-// const chai = require("chai");
-// chai.use(require("chai-json-schema-ajv"));
-// const expect = chai.expect;
 
 describe("API Tests", () => {
 
