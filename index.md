@@ -16,9 +16,9 @@ permalink: /
 7. [Project Structure](#project-structure)
 8. [Launching the Tests](#launching-the-tests)
 9. [Running the Tests](#running-the-tests)
-10. [API Test Scripts](#api-test-scripts)
-11. [UI Test Scripts](#ui-test-scripts)
-12. [What's Next](#whats-next)
+10. [More About API Test Scripts](#more-about-api-test-scripts)
+11. [More About UI Test Scripts](#more-about-ui-test-scripts)
+12. [Reports](#reports)
 
 
 ## Overview
@@ -54,14 +54,14 @@ OR
 
 You can use npm command to install cypress using Visual Studio Code editor and launch a terminal window..
 
-```
+```bash
 npm install cypress --save-dev
 ```
 
 ## Clone the Project
 Using a shell window, cd into the folder path where you would like to clone the repository and use the command below
 
-```
+```bash
 git clone https://github.com/sherrybath12/cypress.git
 ```
 
@@ -75,7 +75,7 @@ After cloning this project, Cypress will scaffold out the below folder structure
 
 ![alt text](/cypress/assets/fixture.png)
 
-<mark>Integration</mark> – Integration folder includes all the test files. The test files may be written as .js, .jsx, .coffee and .cjsx. Usually the preferred extension is .js and the test file name format is test-name.spec.js.
+<mark>Integration</mark> – Integration folder includes all the test files. The test files may be written as .js, .jsx, .coffee and .cjsx. Usually the preferred extension is .js and the test file name format is `testname.spec.js`.
 > In this repostory you will find two script files:  
 > integration/api/api.cy.js  
 > integration/ui/ui.cy.js
@@ -110,7 +110,7 @@ After cloning this project, Cypress will scaffold out the below folder structure
 
 ## Launching the Tests
 Open a new terminal in VS Code and type the command:
-```
+```bash
 npx cypress open
 ```
 This will launch the cypress runner with the tests loaded.
@@ -118,27 +118,29 @@ This will launch the cypress runner with the tests loaded.
 ![alt text](/cypress/assets/welcome.png)
 
 > Alternatively, the tests can be kicked off from the terminal by referencing the script name from the package.json
-```
+```bash
 npm run <scriptname>
 ```
 
 ## Running the Tests
 
-**API Tests** - The test can simply be run by clicking on the api.spec.js file. 
+**API Tests** - The test can simply be run by clicking on the `api.spec.js` file. 
 Below is a snapshot of the all tests run successfully.
 
 &emsp;&emsp;![alt text](/cypress/assets/apirun.png)
+
+&emsp;&emsp;![](/cypress/videos/api/api.spec.js.mp4)
 
 A snapshot of the requests and responses can be seen in the console window
 
 &emsp;&emsp;![alt text](/cypress/assets/apirunconsole.png)
 
-**UI Tests** - The test can simply be run by clicking on the ui.spec.js file. 
+**UI Tests** - The test can simply be run by clicking on the `ui.spec.js` file. 
 Below is a snapshot of the all tests run successfully.
 
 &emsp;&emsp;![alt text](/cypress/assets/uirun.png)
 
-## API Test Scripts
+## More About API Test Scripts
 >1. The API test scripts are located under `cypress/integration/api/api.spec.js`.
 >2. For this project, I have used the open source fake API's at (https://jsonplaceholder.typicode.com/).
 >3. The tests are implemented for atleast each of the following request methods - GET, POST, PUT, DELETE.
@@ -169,13 +171,35 @@ The method signature is `DELETE` and requires the resource id to be deleted.
 
 &emsp;&emsp;&emsp;&emsp;![alt text](/cypress/assets/delapi.png)
 
-## UI Test Scripts
+## More About UI Test Scripts
 1. The UI test scripts are located under `cypress/integration/ui/ui.spec.js`.
 2. For this project, I have used the Nasa website (https://nasa.gov/).
 3. The tests implemented assert loading the website and presence of certain components on the UI.
 
 &emsp;&emsp;![alt text](/cypress/assets/uitests.png)
 
-## What's Next
+## Reports
 
-The tests can be configured to take create customized configurations, generate reports using report generation plugins.
+The tests can be configured to generate beautiful reports using report generation packages like mochawesome using the steps below:
+
+```bash
+npm i mochawesome
+```
+
+Update the `cypress.json` for report parameters like format and target output directory.
+
+```json
+ "reporter": "mochawesome",
+    "reporterOptions": {
+      "reportDir": "mochawesome-report",
+      "overwrite": false,
+      "html": false,
+      "json": true,
+      "timestamp": "mmddyyyy_HHMMss"
+    }
+```
+> The reports can be found at: /mochawesome-report/*.html
+
+![alt text](/cypress/assets/report-api.png)
+
+![alt text](/cypress/assets/report-ui.png)
